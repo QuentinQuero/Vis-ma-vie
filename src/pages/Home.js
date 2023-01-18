@@ -1,12 +1,12 @@
-import {getPokemons} from "../services/pokemonService";
 import {useEffect, useState} from "react";
-import * as arr from "react-bootstrap/ElementChildren";
+import {getPokemons} from "../services/pokemonService";
+import {Link} from "react-router-dom";
 
-export function Pokemons (){
+export function Home (){
     const [pokemon, setPokemons] = useState(null)
 
     function updatePokemon(arrPokemon) {
-        setPokemons(arrPokemon.map(obj => <li key={obj.name}>{obj.name}</li>))
+        setPokemons(arrPokemon.map(obj => <li key={obj.name}><Link to={`/pokemon/${obj.name}`} className="nav-link list-group-item"  >{obj.name}</Link> </li>))
     }
 
     useEffect(() => {
@@ -20,13 +20,11 @@ export function Pokemons (){
 
     return pokemon ? (
         <div>
-            <ul>
+            <ul className="list-group">
                 {pokemon}
             </ul>
         </div>
     ) : (
-        <div>
-            <h2>Loading</h2>
-        </div>
+        <div></div>
     );
 }

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 ### `npm start`
 
@@ -8,9 +8,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+# Objectif:
+Utiliser l'api de pokemon : https://pokeapi.co/ pour afficher un pokedex
+
 
 ## Objectif numéro 1 :
 Créer une nouvelle page qui contiendra l'affichage des pokemons.
+(page d'accueil)
 
 ## Objectif numéro 2:
 Ajouter un appel au service pokemon pour appeler le backend.
